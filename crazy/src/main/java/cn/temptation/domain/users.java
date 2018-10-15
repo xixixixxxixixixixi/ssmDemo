@@ -1,26 +1,22 @@
 package cn.temptation.domain;
 
-import java.util.Date;
-
-public class user {
-    private Integer id;
+public class users {
+    private String user;
 
     private Integer password;
 
-    private String username;
-
-    private Date birthday;
+    private String birthday;
 
     private String sex;
 
     private String address;
 
-    public Integer getId() {
-        return id;
+    public String getUser() {
+        return user;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setUser(String user) {
+        this.user = user == null ? null : user.trim();
     }
 
     public Integer getPassword() {
@@ -31,20 +27,12 @@ public class user {
         this.password = password;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
-    }
-
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setBirthday(String birthday) {
+        this.birthday = birthday == null ? null : birthday.trim();
     }
 
     public String getSex() {

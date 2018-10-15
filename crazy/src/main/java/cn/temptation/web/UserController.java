@@ -1,15 +1,12 @@
 package cn.temptation.web;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
-import cn.temptation.dao.userMapper;
-import cn.temptation.domain.user;
+import cn.temptation.dao.usersMapper;
+import cn.temptation.domain.users;
 
 /**
  * ÓÃ»§¿ØÖÆÆ÷
@@ -17,8 +14,8 @@ import cn.temptation.domain.user;
 @Controller
 @RequestMapping(value = "/user")
 public class UserController {
-    @Resource
-    private userMapper usermapper;
+    
+   
 
     @RequestMapping("/test")
     public String view() {
@@ -30,11 +27,11 @@ public class UserController {
         return "main/index";
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login(user model, HttpSession session) {
+    @RequestMapping(value = "/login")
+    public String login() {
         
-		user user = usermapper.selectByPrimaryKey(10);
-        System.out.println(user.getSex());
+		 
+        
        
         	return "fail";
         

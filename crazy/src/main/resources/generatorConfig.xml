@@ -3,7 +3,7 @@
   "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
     <classPathEntry 
-      location="C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\5.1.30\mysql-connector-java-5.1.30.jar"/>
+      location="C:/Users/DELL/.m2/repository/mysql/mysql-connector-java/5.1.30/mysql-connector-java-5.1.30-sources.jar"/>
     <context id="MysqlTables" targetRuntime="MyBatis3">
         <commentGenerator>
             <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
@@ -11,8 +11,8 @@
         </commentGenerator>
         <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-            connectionURL="jdbc:mysql://localhost:3306/spcx" userId="root"
-            password="lyux1231567">
+            connectionURL="jdbc:mysql://localhost:3306/mysql" userId="root"
+            password="root">
         </jdbcConnection>
         <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer true，把JDBC DECIMAL 和 
             NUMERIC 类型解析为java.math.BigDecimal -->
@@ -36,17 +36,18 @@
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
         <!-- tableName:用于自动生成代码的数据库表；domainObjectName:对应于数据库表的javaBean类名 -->  
-        <table schema="spcx" tableName="account" domainObjectName="account"
+        <table schema="mysql" tableName="users" domainObjectName="users"
             enableCountByExample="false" enableUpdateByExample="false"
             enableDeleteByExample="false" enableSelectByExample="false"
             selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="true" />
         </table>
-        <table schema="spcx" tableName="user" domainObjectName="user"
+        <table schema="mysql" tableName="func" domainObjectName="func"
             enableCountByExample="false" enableUpdateByExample="false"
             enableDeleteByExample="false" enableSelectByExample="false"
             selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="true" />
         </table>
+        
     </context>
 </generatorConfiguration> 
